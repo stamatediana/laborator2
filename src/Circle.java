@@ -6,16 +6,21 @@ public class Circle extends Form {
         this.radius = 0;
     }
 
-    public Circle(String color, float radius) {
+
+    public Circle(float radius, String color) {
         super(color);
         this.radius = radius;
     }
+
+
     @Override
     public float getArea() {
         return (float) (Math.PI * radius * radius);
     }
+
+
     @Override
     public String toString() {
-        return super.toString() + ", radius: " + radius;
+        return "This circle has the color " + getColor() + " and radius " + radius;
     }
 }
