@@ -15,3 +15,5 @@ public class Main {
         System.out.println("getInstance was called " + PasswordMaker3.getAccessCount() + " times.");
     }
 }
+
+
