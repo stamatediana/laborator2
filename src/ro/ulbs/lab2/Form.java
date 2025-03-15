@@ -1,3 +1,5 @@
+package ro.ulbs.lab2;
+
 public class Form {
     private String color;
 
