@@ -1,6 +1,10 @@
 package ro.ulbs.lab2;
 
 public class Form {
+    public String getColor() {
+        return color;
+    }
+
     private String color;
 
     public Form() {

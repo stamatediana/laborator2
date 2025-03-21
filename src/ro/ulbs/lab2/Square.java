@@ -1,4 +1,6 @@
-import ro.ulbs.lab2.Form;
+package ro.ulbs.lab2;
+
+
 
 public class Square extends Form {
     private float side;
