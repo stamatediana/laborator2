@@ -1,4 +1,5 @@
-package ro.ulbs.laborator4;//problema2
+//problema2
+package ro.ulbs.laborator4;
 import ro.ulbs.laborator4.Student;
 import java.util.*;
 
