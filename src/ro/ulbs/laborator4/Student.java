@@ -14,6 +14,9 @@ public class Student {
         this.note = new ArrayList<>();
     }
 
+    public Student(String nume, String prenume, String grupa, int[] note) {
+    }
+
     public String getNume() {
         return nume;
     }
