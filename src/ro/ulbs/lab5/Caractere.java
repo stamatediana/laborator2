@@ -1,5 +1,5 @@
 package ro.ulbs.lab5;
-
+//prob2
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
