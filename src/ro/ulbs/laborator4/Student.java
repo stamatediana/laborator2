@@ -3,6 +3,7 @@ package ro.ulbs.laborator4;
 import java.util.*;
 
 public class Student {
+    public String prenume;
     private String nume;
     private String grupa;
     private List<Integer> note;
