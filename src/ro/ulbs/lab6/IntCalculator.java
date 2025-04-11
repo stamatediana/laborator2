@@ -1,5 +1,6 @@
 package ro.ulbs.lab6;
 //problema 1;
+
 public class IntCalculator {
     private int state;
 

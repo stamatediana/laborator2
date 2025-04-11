@@ -26,5 +26,14 @@ public class DoubleCalculator extends ACalculator {
         this.state = (Double) this.state * value;
         return this;
     }
+    //problema 2 lab 7
+    public DoubleCalculator divide(double value) {
+        if (value == 0.0) {
+            throw new ArithmeticException("Cannot divide by zero.");
+        }
+        this.state = (Double) this.state / value;
+        return this;
+    }
+
 }
 

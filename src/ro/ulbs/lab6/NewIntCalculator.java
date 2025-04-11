@@ -26,4 +26,13 @@ public class NewIntCalculator extends ACalculator {
         this.state = (Integer) this.state * value;
         return this;
     }
+//problema 2 lab 7
+public NewIntCalculator divide(int value) {
+    if (value == 0) {
+        throw new ArithmeticException("Cannot divide by zero.");
+    }
+    this.state = (Integer) this.state / value;
+    return this;
+}
+
 }
