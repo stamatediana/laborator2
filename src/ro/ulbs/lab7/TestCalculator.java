@@ -105,6 +105,53 @@ public class TestCalculator {
         calc.multiply(0.0);
         assertEquals(0.0, (Double) calc.result(), 0.0001);
     }
+    @Test
+    public void testDividePositiveInt() {
+        // Arrange
+        NewIntCalculator calc = new NewIntCalculator(20);
+
+        // Act
+        calc.divide(4); // 20 / 4
+
+        // Assert
+        assertEquals(5, calc.result());
+    }
+
+    @Test
+    public void testDivideNegativeInt() {
+        // Arrange
+        NewIntCalculator calc = new NewIntCalculator(20);
+
+        // Act
+        calc.divide(-5); // 20 / -5
+
+        // Assert
+        assertEquals(-4, calc.result());
+    }
+    @Test
+    public void testDividePositiveDouble() {
+        // Arrange
+        DoubleCalculator calc = new DoubleCalculator(10.0);
+
+        // Act
+        calc.divide(2.5); // 10.0 / 2.5
+
+        // Assert
+        assertEquals(4.0, (Double) calc.result(), 0.0001);
+    }
+
+    @Test
+    public void testDivideNegativeDouble() {
+        // Arrange
+        DoubleCalculator calc = new DoubleCalculator(10.0);
+
+        // Act
+        calc.divide(-2.0); // 10.0 / -2.0
+
+        // Assert
+        assertEquals(-5.0, (Double) calc.result(), 0.0001);
+    }
+
 
     @Test
     public void testDivideByZeroInt() {
