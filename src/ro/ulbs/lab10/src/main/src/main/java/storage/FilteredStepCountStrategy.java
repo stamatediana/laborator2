@@ -1,4 +1,6 @@
-package ro.ulbs.lab10.src.main.src.main.java.main;
+package ro.ulbs.lab10.src.main.src.main.java.storage;
+
+
 
 import ro.ulbs.lab10.src.main.src.main.java.dataprocessing.StepCountStrategy;
 import ro.ulbs.lab10.src.main.src.main.java.storage.SensorData;

@@ -31,7 +31,7 @@ public class MainApp {
         dataRepository.addData(new SensorData(500, baseTimestamp + 600));
 
         System.out.println("====================================================");
-        aggregator.receive(dataRepository);
+
         System.out.println(aggregator.getResults());
         System.out.println("====================================================");
     }
