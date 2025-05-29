@@ -23,10 +23,10 @@ public class Prob1 {
             for (Row row : sheet) {
                 for (Cell cell : row) {
                     switch (cell.getCellType()) {
-                        case CellType.NUMERIC:
+                        case NUMERIC:
                             System.out.print(cell.getNumericCellValue() + "\t");
                             break;
-                        case CellType.STRING:
+                        case STRING:
                             System.out.print(cell.getStringCellValue() + "\t");
                             break;
                     }
