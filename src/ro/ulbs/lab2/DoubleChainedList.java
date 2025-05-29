@@ -1,29 +1,30 @@
 package ro.ulbs.lab2;
-//PROB2
-import ro.ulbs.lab2.SimpleChainedNode;
+
+
 import ro.ulbs.paradigme.lab2.api.Node;
 //import ro.ulbs.paradigme.lab2.api.MyList;
 
-public class SimpleChainedList implements  MyList {
-    private SimpleChainedNode head = null;
+public class DoubleChainedList implements MyList {
+    private DoubleChainedNode head = null;
 
     @Override
     public void addValue(int value) {
-        SimpleChainedNode newNode = new SimpleChainedNode(value);
+        DoubleChainedNode newNode = new DoubleChainedNode(value);
         if (head == null) {
             head = newNode;
             return;
         }
-        SimpleChainedNode current = head;
+        DoubleChainedNode current = head;
         while (current.getNextNode() != null) {
             current = current.getNextNode();
         }
         current.setNextNode(newNode);
+        newNode.setPrevNode(current);
     }
 
     @Override
     public void listNodes() {
-        SimpleChainedNode current = head;
+        DoubleChainedNode current = head;
         while (current != null) {
             System.out.print(current.getValue() + " ");
             current = current.getNextNode();
@@ -33,7 +34,7 @@ public class SimpleChainedList implements  MyList {
 
     @Override
     public Node getNodeByValue(int value) {
-        SimpleChainedNode current = head;
+        DoubleChainedNode current = head;
         while (current != null) {
             if (current.getValue() == value) {
                 return current;
@@ -45,25 +46,26 @@ public class SimpleChainedList implements  MyList {
 
     @Override
     public void removeNodeByValue(int value) {
-        if (head == null) return;
-        if (head.getValue() == value) {
-            head = head.getNextNode();
-            return;
-        }
-
-        SimpleChainedNode current = head;
-        while (current.getNextNode() != null && current.getNextNode().getValue() != value) {
+        DoubleChainedNode current = head;
+        while (current != null && current.getValue() != value) {
             current = current.getNextNode();
+        }
+        if (current == null) return;
+
+        if (current.getPrevNode() != null) {
+            current.getPrevNode().setNextNode(current.getNextNode());
+        } else {
+            head = current.getNextNode();
         }
 
         if (current.getNextNode() != null) {
-            current.setNextNode(current.getNextNode().getNextNode());
+            current.getNextNode().setPrevNode(current.getPrevNode());
         }
     }
 
     @Override
     public boolean isSorted() {
-        SimpleChainedNode current = head;
+        DoubleChainedNode current = head;
         while (current != null && current.getNextNode() != null) {
             if (current.getValue() > current.getNextNode().getValue()) {
                 return false;
@@ -75,7 +77,7 @@ public class SimpleChainedList implements  MyList {
 
     public int sumValues() {
         int sum = 0;
-        SimpleChainedNode current = head;
+        DoubleChainedNode current = head;
         while (current != null) {
             sum += current.getValue();
             current = current.getNextNode();

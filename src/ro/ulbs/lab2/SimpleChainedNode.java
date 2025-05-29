@@ -1,9 +1,14 @@
 package ro.ulbs.lab2;
-import ro.ulbs.lab2.Node;
+//PROB2
+import ro.ulbs.paradigme.lab2.api.Node;
 
 public class SimpleChainedNode implements Node {
     private int value;
-    private SimpleChainedNode nextNode;
+    private SimpleChainedNode next;
+
+    public SimpleChainedNode(int value) {
+        this.value = value;
+    }
 
     @Override
     public int getValue() {
@@ -15,11 +20,11 @@ public class SimpleChainedNode implements Node {
         this.value = value;
     }
 
-    public void setNextNode(SimpleChainedNode nextNode) {
-        this.nextNode = nextNode;
+    public void setNextNode(SimpleChainedNode n) {
+        this.next = n;
     }
 
     public SimpleChainedNode getNextNode() {
-        return nextNode;
+        return next;
     }
 }

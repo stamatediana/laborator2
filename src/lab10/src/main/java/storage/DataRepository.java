@@ -29,5 +29,6 @@ public class DataRepository {
     }
 
     public void addData(SensorData sensorData) {
+
     }
 }
